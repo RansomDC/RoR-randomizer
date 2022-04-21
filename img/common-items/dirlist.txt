@@ -1,0 +1,15 @@
+Armor-Piercing_Rounds.webp  Oddly-shaped_Opal.webp
+Backup_Magazine.webp	    Pauls_Goat_Hoof.webp
+Bison_Steak.webp	    Personal_Shield_Generator.webp
+Bundle_of_Fireworks.webp    Power_Elixir.webp
+Bustling_Fungus.webp	    Repulsion_Armor_Plate.webp
+Cautious_Slug.webp	    Roll_of_Pennies.webp
+Crowbar.webp		    Rusted_Key.webp
+Delicate_Watch.webp	    Soldiers_Syringe.webp
+Energy_Drink.webp	    Sticky_Bomb.webp
+Focus_Crystal.webp	    Stun_Grenade.webp
+Gasoline.webp		    Topaz_Brooch.webp
+Lens-Makers_Glasses.webp    Tougher_Times.webp
+Medkit.webp		    Tri-Tip_Dagger.webp
+Mocha.webp		    Warbanner.webp
+Monster_Tooth.webp	    dirlist.txt

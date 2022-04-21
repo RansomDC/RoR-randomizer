@@ -15,7 +15,9 @@ const purples = document.getElementById("void");
 const yellows = document.getElementById("boss");
 
 const commonItems = ["Armor-Piercing Rounds", "Backup Magazine", "Bison Steak", "Bundle of Fireworks", "Bustling Fungus", "Cautious Slug", "Crowbar", "Delicate Watch", "Energy Drink", "Focus Crystal", "Gasoline", "Lens-Maker's Glasses", "Medkit", "Mocha", "Monster Tooth", "Oddly-shaped Opal", "Paul's Goat Hoof", "Personal Shield Generator", "Power Elixir", "Repulsion Armor Plate", "Roll of Pennies","Rusted Key", "Soldier's Syringe", "Sticky Bomb", "Stun Grenade","Topaz Brooch", "Tougher Times", "Tri-Tip Dagger", "Warbanner"];
+const commonFiles = ["Armor-Piercing_Rounds.webp", "Backup_Magazine.webp", "Bison_Steak.webp", "Bundle_of_Fireworks.webp", "Bustling_Fungus.webp", "Cautious_Slug.webp", "Crowbar.webp", "Delicate_Watch.webp", "Energy_Drink.webp", "Focus_Crystal.webp", "Gasoline.webp", "Lens-Makers_Glasses.webp", "Medkit.webp", "Mocha.webp", "Monster_Tooth.webp", "Oddly-shaped_Opal.webp", "Pauls_Goat_Hoof.webp", "Personal_Shield_Generator.webp", "Power_Elixir.webp", "Repulsion_Armor_Plate.webp", "Roll_of_Pennies.webp", "Rusted_Key.webp", "Soldiers_Syringe.webp", "Sticky_Bomb.webp", "Stun_Grenade.webp", "Topaz_Brooch.webp", "Tougher_Times.webp", "Tri-Tip_Dagger.webp", "Warbanner.webp"]
 const uncommonItems = ["AtG Missile Mk. 1", "Bandolier", "Berzerker's Pauldron", "Chronobauble", "Death Mark", "Fuel Cell", "Ghor's Tome", "Harvester's Scythe", "Hopoo Feather", "Hunter's Harpoon", "Ignition Tank", "Infusion", "Kjaro's Band", "Leeching Seed", "Lepton Daisy", "Old Guillotine", "Old War Stealthkit", "Predatory Instincts", "Razorwire", "Red Whip", "Rose Buckler", "Runald's Band", "Shipping Request Form", "Shuriken", "Squid Polyp", "Ukulele", "War Horn", "Wax Quail", "Will-o'-the-wisp"];
+const uncommonFiles = ["AtG_Missile_Mk._1.webp", "Bandolier.webp", "Berzerkers_Pauldron.webp", "Chronobauble.webp", "Death_Mark.webp", "Fuel_Cell.webp", "Ghors_Tome.webp", "Harvesters_Scythe.webp", "Hopoo_Feather.webp", "Hunters_Harpoon.webp", "Ignition_Tank.webp", "Leeching_Seed.webp", "Predatory_Instincts.webp  Wax_Quail.webp", "Razorwire.webp", "Red_Whip.webp", "Kjaros_Band.webp", "War_Horn.webp", "Rose_Buckler.webp", "Infusion.webp", "Shipping_Request_Form.webp", "Shuriken.webp", "Lepton_Daisy.webp", "Old_Guillotine.webp", "Old_War_Stealthkit.webp", "Runalds_Band.webp", "Will-o-the-wisp.webp", "Squid_Polyp.webp", "Ukulele.webp"]
 const rareItems = ["57 Leaf Clover", "Aegis", "Alien Head", "Ben's Raincoat", "Bottled Chaos", "Brainstalks", "Brilliant Behemoth", "Ceremonial Dagger", "Dio's Best Friend", "Frost Relic", "H3AD-5T v2", "Happiest Mask", "Hardlight Afterburner", "Interstellar Desk Plant", "Laser Scope", "N'kuhana's Opinion", "Pocket I.C.B.M.", "Rejuvenation Rack", "Resonance Disc", "Sentient Meat Hook", "Shattering Justice", "Soulbound Catalyst", "Spare Drone Parts", "Symbiotic Scorpion", "Unstable Tesla Coil", "Wake of Vultures"];
 const lunarItems = ["Beads of Fealty", "Brittle Crown,Corpsebloom", "Defiant Gouge", "Egocentrism", "Essence of Heresy", "Eulogy Zero", "Focused Convergence", "Gesture of the Drowned", "Hooks of Heresy", "Light Flux Pauldron", "Mercurial Rachis", "Purity", "Shaped Glass", "Stone Flux Pauldron", "Strides of Heresy", "Transcendence", "Visions of Heresy"];
 const useItems = ["Blast Shower", "Disposable Missile Launcher", "Eccentric Vase", "Executive Card", "Foreign Fruit", "Forgive Me Please", "Gnarled Woodsprite", "Goobo Jr.", "Gorag's Opus", "Jade Elephant", "Milky Chrysalis", "Molotov (6-Pack)", "Ocular HUD", "Preon Accumulator", "Primordial Cube", "Radar Scanner", "Remote Caffeinator", "Royal Capacitor", "Sawmerang", "Super Massive Leech", "The Back-up", "The Crowdfunder", "Trophy Hunter's Tricorn", "Volcanic Egg", "Effigy of Grief", "Glowing Meteorite", "Helfire Tincture", "Spinel Tonic"]
@@ -50,14 +52,16 @@ function choose(numberOfIterations, itemTypeArray) {
     return returnItems;
 }
 
+
+//This function finds (iteration) number of items from a given array (itemArray) and prints them to specific HTML element (location)
 function getRandFromArray(iterations, itemArray, location) {
     let randArray = [];
     randArray = choose(iterations, itemArray);
     for (let i = 0; i < iterations; i++) {
-        if (iterations > 1) {
-        location.textContent += (itemArray[i] + " and ");
+        if (i === (iterations - 1)) {
+            location.textContent += (randArray[i]);
         } else {
-        location.textContent += (itemArray[i]);
+            location.textContent += (randArray[i] + " and ");
         }
     }
 }
@@ -70,4 +74,20 @@ function random321() {
     getRandFromArray(1, useItems, oranges);
     getRandFromArray(1, voidItems, purples);
     getRandFromArray(1, bossItems, yellows);
+}
+
+//=======================
+// IMAGE TESTS
+//-----------------------
+function showImage(src, width, height, alt) {
+    let img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+   img.alt = alt;
+   whites.appendChild(img);
+}
+
+function toList(string) {
+    return string.replace(/,/g,", ");
 }
