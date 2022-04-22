@@ -1,0 +1,5 @@
+Charged_Perforator.webp  Little_Disciple.webp	 Shatterspleen.webp
+Defense_Nucleus.webp	 Mired_Urn.webp		 Titanic_Knurl.webp
+Empathy_Cores.webp	 Molten_Perforator.webp  dirlist.txt
+Genesis_Loop.webp	 Planula.webp
+Halcyon_Seed.webp	 Queens_Gland.webp

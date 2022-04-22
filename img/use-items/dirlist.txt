@@ -1,0 +1,13 @@
+Blast_Shower.webp		  Preon_Accumulator.webp
+Disposable_Missile_Launcher.webp  Primordial_Cube.webp
+Eccentric_Vase.webp		  Radar_Scanner.webp
+Executive_Card.webp		  Remote_Caffeinator.webp
+Foreign_Fruit.webp		  Royal_Capacitor.webp
+Forgive_Me_Please.webp		  Sawmerang.webp
+Gnarled_Woodsprite.webp		  Super_Massive_Leech.webp
+Goobo_Jr..webp			  The_Back-up.webp
+Gorags_Opus.webp		  The_Crowdfunder.webp
+Jade_Elephant.webp		  Trophy_Hunters_Tricorn.webp
+Milky_Chrysalis.webp		  Volcanic_Egg.webp
+Molotov_(6-Pack).webp		  dirlist.txt
+Ocular_HUD.webp

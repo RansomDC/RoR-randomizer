@@ -1,0 +1,8 @@
+Beads_of_Fealty.webp	Focused_Convergence.webp     Shaped_Glass.webp
+Brittle_Crown.webp	Gesture_of_the_Drowned.webp  Spinel_Tonic.webp
+Corpsebloom.webp	Glowing_Meteorite.webp	     Stone_Flux_Pauldron.webp
+Defiant_Gouge.webp	Helfire_Tincture.webp	     Strides_of_Heresy.webp
+Effigy_of_Grief.webp	Hooks_of_Heresy.webp	     Transcendence.webp
+Egocentrism.webp	Light_Flux_Pauldron.webp     Visions_of_Heresy.webp
+Essence_of_Heresy.webp	Mercurial_Rachis.webp	     dirlist.txt
+Eulogy_Zero.webp	Purity.webp
