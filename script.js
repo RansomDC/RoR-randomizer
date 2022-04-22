@@ -23,8 +23,8 @@ const uncommonFiles = ["AtG_Missile_Mk._1.webp", "Bandolier.webp", "Berzerkers_P
 const rareItems = ["57 Leaf Clover", "Aegis", "Alien Head", "Ben's Raincoat", "Bottled Chaos", "Brainstalks", "Brilliant Behemoth", "Ceremonial Dagger", "Dio's Best Friend", "Frost Relic", "H3AD-5T v2", "Happiest Mask", "Hardlight Afterburner", "Interstellar Desk Plant", "Laser Scope", "N'kuhana's Opinion", "Pocket I.C.B.M.", "Rejuvenation Rack", "Resonance Disc", "Sentient Meat Hook", "Shattering Justice", "Soulbound Catalyst", "Spare Drone Parts", "Symbiotic Scorpion", "Unstable Tesla Coil", "Wake of Vultures"];
 const rareFiles = ["57_Leaf_Clover.webp", "Aegis.webp", "Alien_Head.webp", "Bens_Raincoat.webp", "Bottled_Chaos.webp", "Brainstalks.webp", "Brilliant_Behemoth.webp", "Ceremonial_Dagger.webp", "Dios_Best_Friend.webp", "Frost_Relic.webp", "H3AD-5T_v2.webp", "Happiest_Mask.webp", "Hardlight_Afterburner.webp  dirlist.txt", "Interstellar_Desk_Plant.webp", "Laser_Scope.webp", "Nkuhanas_Opinion.webp", "Pocket_I.C.B.M..webp", "Rejuvenation_Rack.webp", "Resonance_Disc.webp", "Sentient_Meat_Hook.webp", "Shattering_Justice.webp", "Soulbound_Catalyst.webp", "Spare_Drone_Parts.webp", "Symbiotic_Scorpion.webp", "Unstable_Tesla_Coil.webp", "Wake_of_Vultures.webp"]
 
-const lunarItems = ["Beads of Fealty", "Brittle Crown,Corpsebloom", "Defiant Gouge", "Egocentrism", "Essence of Heresy", "Eulogy Zero", "Focused Convergence", "Gesture of the Drowned", "Hooks of Heresy", "Light Flux Pauldron", "Mercurial Rachis", "Purity", "Shaped Glass", "Stone Flux Pauldron", "Strides of Heresy", "Transcendence", "Visions of Heresy"];
-const lunarFiles = ["Beads_of_Fealty.webp", "Brittle_Crown.webp", "Corpsebloom.webp", "Defiant_Gouge.webp", "Effigy_of_Grief.webp", "Egocentrism.webp", "Essence_of_Heresy.webp", "Eulogy_Zero.webp", "Focused_Convergence.webp", "Gesture_of_the_Drowned.webp", "Glowing_Meteorite.webp", "Helfire_Tincture.webp", "Hooks_of_Heresy.webp", "Light_Flux_Pauldron.webp", "Mercurial_Rachis.webp", "Purity.webp", "Shaped_Glass.webp", "Spinel_Tonic.webp", "Stone_Flux_Pauldron.webp", "Strides_of_Heresy.webp", "Transcendence.webp", "Visions_of_Heresy.webp"];
+const lunarItems = ["Beads of Fealty", "Brittle Crown", "Corpsebloom", "Defiant Gouge", "Egocentrism", "Essence of Heresy", "Eulogy Zero", "Focused Convergence", "Gesture of the Drowned", "Hooks of Heresy", "Light Flux Pauldron", "Mercurial Rachis", "Purity", "Shaped Glass", "Stone Flux Pauldron", "Strides of Heresy", "Transcendence", "Visions of Heresy"];
+const lunarFiles = ["Beads_of_Fealty.webp", "Brittle_Crown.webp", "Corpsebloom.webp", "Defiant_Gouge.webp", "Egocentrism.webp", "Essence_of_Heresy.webp", "Eulogy_Zero.webp", "Focused_Convergence.webp", "Gesture_of_the_Drowned.webp", "Hooks_of_Heresy.webp", "Light_Flux_Pauldron.webp", "Mercurial_Rachis.webp", "Purity.webp", "Shaped_Glass.webp", "Stone_Flux_Pauldron.webp", "Strides_of_Heresy.webp", "Transcendence.webp", "Visions_of_Heresy.webp"];
 
 const useItems = ["Blast Shower", "Disposable Missile Launcher", "Eccentric Vase", "Executive Card", "Foreign Fruit", "Forgive Me Please", "Gnarled Woodsprite", "Goobo Jr.", "Gorag's Opus", "Jade Elephant", "Milky Chrysalis", "Molotov (6-Pack)", "Ocular HUD", "Preon Accumulator", "Primordial Cube", "Radar Scanner", "Remote Caffeinator", "Royal Capacitor", "Sawmerang", "Super Massive Leech", "The Back-up", "The Crowdfunder", "Trophy Hunter's Tricorn", "Volcanic Egg", "Effigy of Grief", "Glowing Meteorite", "Helfire Tincture", "Spinel Tonic"]
 const useFiles = ["Blast_Shower.webp", "Disposable_Missile_Launcher.webp", "Eccentric_Vase.webp", "Executive_Card.webp", "Foreign_Fruit.webp", "Forgive_Me_Please.webp", "Gnarled_Woodsprite.webp", "Goobo_Jr..webp", "Gorags_Opus.webp", "Jade_Elephant.webp", "Milky_Chrysalis.webp", "Molotov_(6-Pack).webp", "Ocular_HUD.webp", "Preon_Accumulator.webp", "Primordial_Cube.webp", "Radar_Scanner.webp", "Remote_Caffeinator.webp", "Royal_Capacitor.webp", "Sawmerang.webp", "Super_Massive_Leech.webp", "The_Back-up.webp", "The_Crowdfunder.webp", "Trophy_Hunters_Tricorn.webp", "Volcanic_Egg.webp", "Effigy_of_Grief.webp", "Glowing_Meteorite.webp", "Helfire_tincture.webp", "Spinel_Tonic.wepb"];
@@ -78,6 +78,8 @@ function getRandFromArray(iterations, itemArray, location) {
     }
 }
 
+
+
 // Does the standard of choosing 3 common items, 3 uncommon, and 1 rare item, as well as one of each other type of item at random.
 function random321() {
     getRandFromArray(3, commonItems, whites);
@@ -90,17 +92,30 @@ function random321() {
 }
 
 //=======================
-// IMAGE TESTS
+//       IMAGES 
 //-----------------------
+
+//Create an object class
+//      Create a function on that object to call functions to print names and images of its values
+//Get X-number of random (non-repeating) index numbers from an array  
+//Add those numbers to the object e.g. white-items:[12, 6, 20]
+//Create function to retrieve the name of the items and print them to the screen
+//Create function to retrieve the image of the items and print them to the screen
+
+
+
+
 function showImage(src, width, height, alt) {
     let img = document.createElement("img");
     img.src = src;
     img.width = width;
     img.height = height;
-   img.alt = alt;
-   whites.appendChild(img);
+    img.alt = alt;
+    whites.appendChild(img);
 }
 
+
+//Not used in program. Just used for collecting all of the file names so that I didn't have to type them all out.
 function toList(string) {
     return string.replace(/,/g,", ");
 }
