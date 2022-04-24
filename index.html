@@ -5,39 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3-2-1</title>
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <button onclick="random321()"> Click here to generate a random 321!</button>
+    <div>
+        <button onclick="yourRolls.standard321()">Click here for your random items!</button>
     </div>
     <div class="container">
         <div class="results">
-            <div id="common">
-
-            </div>
-            <div id="uncommon">
-
-            </div>
-            <div id="rare">
-
-            </div>
-            <div id="lunar">
-
-            </div>
-            <div id="useitem">
-
-            </div>
-            <div id="void">
-
-            </div>
-            <div id="boss">
-
-            </div>
+            <div id="common" class="box"></div>
+            <br>
+            <div id="uncommon" class="box"></div>
+            <br>
+            <div id="rare" class="box"></div>
+            <br>
+            <div id="lunar" class="box"></div>
+            <br>
+            <div id="useitem" class="box"></div>
+            <br>
+            <div id="void" class="box"></div>
+            <br>
+            <div id="boss" class="box"></div>
         </div>
     </div>
-    <div>
-        <button id="testButton" onclick="showImage('./img/Tougher_Times.webp', 100, 100, 'Tougher Times')">Test</button>
-    </div>
-    <script src="./script.js"></script>
+    
 </body>
 </html>
