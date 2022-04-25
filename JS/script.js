@@ -143,7 +143,7 @@ function showImage(src, width, height, alt, container) {
     img.width = width;
     img.height = height;
     img.alt = alt;
-    img.class = "randItem";
+    img.class = "randItem"; 
     container.appendChild(img);
 }
 
