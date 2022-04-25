@@ -1,0 +1,93 @@
+#body {
+    background: url(../img/bg.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/*DARK COVER FOR BACKGROUND IMAGE*/
+#container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+/*CENTERING RANDOMIZED ITEMS*/
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+button {
+    padding: 5px;
+    border: 1px solid grey;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    background-color: rgba(66,82,99,255);
+    color: white;
+    text-shadow: black 2px 2px;
+    font-size: 26pt;
+    box-shadow: inset 5px 5px 1px rgba(83,102,120,255), inset -3px -3px 1px rgba(83,102,120,255);
+}
+
+
+/*===================================
+BACKGROUND COLORS FOR EACH ITEM TYPE
+-------------------------------------*/
+#common {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    border: 3px solid white;
+}
+#uncommon {
+    background-color: rgba(66, 226, 66, 0.329);
+    border-radius: 15px;
+    border: 3px solid rgb(133, 252, 118);
+}
+#rare {
+    background-color: rgba(231, 34, 34, 0.329);
+    border-radius: 15px;
+    border: 3px solid rgb(252, 118, 118);
+}
+#lunar {
+    background-color: rgba(34, 119, 231, 0.329);
+    border-radius: 15px;
+    border: 3px solid rgb(118, 172, 252);
+}
+#useitem {
+    background-color: rgba(231, 129, 34, 0.329);
+    border-radius: 15px;
+    border: 3px solid rgb(252, 172, 118);
+}
+#void {
+    background-color: rgba(198, 34, 231, 0.329);
+    border-radius: 15px;
+    border: 3px solid rgb(241, 118, 252);
+}
+#boss {
+    background-color: rgba(231, 228, 34, 0.329);
+    border-radius: 15px;
+    border: 3px solid rgb(252, 250, 118);
+}
+/*=============
+    END COLORS
+---------------*/
+
+.box {
+    margin: 5px;
+}
+
+img {
+    margin: 20px;
+}

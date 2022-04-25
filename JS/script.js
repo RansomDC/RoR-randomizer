@@ -1,11 +1,3 @@
-//Start
-//run random number generator between 0 and white list.length
-//add value to 3-2-1 object 
-//loop 3x each time if value is equal to value present in 3-2-1 object repeate
-//Repeate these steps for green (loop 2x), 
-//  red (1x), (equipment including lunar 1x), 
-//  (lunar 1x), (void 1x), boss (1x)
-
 const whites = document.getElementById("common");
 const greens = document.getElementById("uncommon");
 const reds = document.getElementById("rare");
