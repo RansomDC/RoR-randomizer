@@ -6,6 +6,8 @@ const oranges = document.getElementById("useitem");
 const purples = document.getElementById("void");
 const yellows = document.getElementById("boss");
 
+const results = document.querySelector(".results");
+
 const commonItems = ["Armor-Piercing Rounds", "Backup Magazine", "Bison Steak", "Bundle of Fireworks", "Bustling Fungus", "Cautious Slug", "Crowbar", "Delicate Watch", "Energy Drink", "Focus Crystal", "Gasoline", "Lens-Maker's Glasses", "Medkit", "Mocha", "Monster Tooth", "Oddly-shaped Opal", "Paul's Goat Hoof", "Personal Shield Generator", "Power Elixir", "Repulsion Armor Plate", "Roll of Pennies","Rusted Key", "Soldier's Syringe", "Sticky Bomb", "Stun Grenade","Topaz Brooch", "Tougher Times", "Tri-Tip Dagger", "Warbanner"];
 const commonFiles = ["Armor-Piercing_Rounds.webp", "Backup_Magazine.webp", "Bison_Steak.webp", "Bundle_of_Fireworks.webp", "Bustling_Fungus.webp", "Cautious_Slug.webp", "Crowbar.webp", "Delicate_Watch.webp", "Energy_Drink.webp", "Focus_Crystal.webp", "Gasoline.webp", "Lens-Makers_Glasses.webp", "Medkit.webp", "Mocha.webp", "Monster_Tooth.webp", "Oddly-shaped_Opal.webp", "Pauls_Goat_Hoof.webp", "Personal_Shield_Generator.webp", "Power_Elixir.webp", "Repulsion_Armor_Plate.webp", "Roll_of_Pennies.webp", "Rusted_Key.webp", "Soldiers_Syringe.webp", "Sticky_Bomb.webp", "Stun_Grenade.webp", "Topaz_Brooch.webp", "Tougher_Times.webp", "Tri-Tip_Dagger.webp", "Warbanner.webp"]
 
@@ -64,6 +66,9 @@ let yourRolls = {
 
         this.chooseItems(3, 2, 1, 1, 1, 1, 1);
         this.printAll();
+        results.style.display = "flex";
+        document.querySelector(".generate").textContent = "...False Strength"
+
     },
     //Add the randomly chosen numbers to the object e.g. white-items:[12, 6, 20]
     chooseItems: function(whiteI, greenI, redI, blueI, orangeI, purpleI, yellowI) {
@@ -75,7 +80,7 @@ let yourRolls = {
         this.voids = chooseRandom(purpleI, voidItems);
         this.bosses = chooseRandom(yellowI, bossItems);
     },
-    //A method to print all of the values stored in 
+    //A method to print all of the values stored in the object
     printAll: function() {
         yourRolls.printImg(this.commons, commonFiles, "common", whites);
         yourRolls.printImg(this.uncommons, uncommonFiles, "uncommon", greens);
