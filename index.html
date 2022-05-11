@@ -11,8 +11,22 @@
 <body id="body">
     <div id="container">
         <div class="buttonContainer">
-            <button class="generate" onclick="yourRolls.standard321()">The planet gives...</button>
+            <button class="generate" onclick="yourRolls.standard321()">Generate your items</button>
         </div>
+        <button class="accordion">Choose your path</button>
+        <div class="panel">
+            <div class="controlsContainer">
+                <p>Choose the number of random items you want.</p>
+                <input id="numberwhites" type="text" value="3">
+                <input id="numbergreens" type="text" value="2">
+                <input id="numberreds" type="text" value="1">
+                <input id="numberblues" type="text" value="1">
+                <input id="numberoranges" type="text" value="1">
+                <input id="numberpurples" type="text" value="1">
+                <input id="numberyellows" type="text" value="1">
+            </div>
+        </div>
+
         <div >
             <div class="results">
                 <div id="common" class="box"></div>

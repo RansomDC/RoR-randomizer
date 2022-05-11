@@ -32,6 +32,53 @@
 }
 
 
+
+/*==============
+  INPUT STYLING
+----------------*/
+
+#numbergreens, #numberwhites, #numberreds, #numberblues, #numberoranges, #numberpurples, #numberyellows {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border: 1px solid grey;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    color: rgba(83,102,120,0.8);
+    text-shadow: black 1px 1px;
+    font-size: 16pt;
+    box-shadow: inset 5px 5px 1px rgba(83,102,120,0.8), inset -5px -5px 1px rgba(83,102,120,0.8);
+    text-align: center;
+}
+
+#numberwhites {
+    background-color: rgb(196, 196, 196);
+}
+#numbergreens {
+    background-color: rgb(133, 252, 118);
+}
+#numberreds {
+    background-color: rgb(252, 118, 118);
+}
+#numberblues {
+    background-color: rgb(118, 172, 252);
+}
+#numberoranges {
+    background-color: rgb(252, 172, 118);
+}
+#numberpurples {
+    background-color: rgb(241, 118, 252);
+}
+#numberyellows {
+    background-color: rgb(252, 250, 118);
+}
+
+/*==============
+  INPUT STYLING
+----------------*/
+
+
+
 /*==================
   BUTTON ANIMATIONS
 --------------------*/
@@ -56,10 +103,6 @@ button:active {
     background-color: rgba(153,160,106,0.9);
     box-shadow: inset 5px 5px 1px rgba(187,191,113,0.8), inset -3px -3px 1px rgba(187,191,113,0.8);
 }
-
-
-
-
 /*=====================
  END BUTTON ANIMATIONS
 -----------------------*/
@@ -115,3 +158,40 @@ BACKGROUND COLORS FOR EACH ITEM TYPE
 img {
     margin: 20px;
 }
+
+/*==========
+  ACCORDION
+------------*/
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: rgba(181,193,158,0.9);
+    box-shadow: inset 5px 5px 1px rgba(220,226,169,0.8), inset -3px -3px 1px rgba(220,226,169,0.8);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+      text-align: center;
+    padding: 0 18px;
+    background-color: rgba(66,82,99,0.8);
+    display: none;
+    overflow: hidden;
+  }
+
+  .controlsContainer p {
+      color: white;
+      font-weight: 900;
+      font-size: 14pt;
+      font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

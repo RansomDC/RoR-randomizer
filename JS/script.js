@@ -64,7 +64,13 @@ let yourRolls = {
         eraseChildren(purples);
         eraseChildren(yellows);
 
-        this.chooseItems(3, 2, 1, 1, 1, 1, 1);
+        this.chooseItems(document.getElementById("numberwhites").value,
+        document.getElementById("numbergreens").value,
+        document.getElementById("numberreds").value,
+        document.getElementById("numberblues").value,
+        document.getElementById("numberoranges").value,
+        document.getElementById("numberpurples").value,
+        document.getElementById("numberyellows").value);
         this.printAll();
         results.style.display = "flex";
         document.querySelector(".generate").textContent = "...False Strength"
@@ -152,6 +158,29 @@ function showImage(src, width, height, alt, container) {
     container.appendChild(img);
 }
 
+
+//==============================
+// JavaScript for the Accordion
+//------------------------------
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
 //Not used in program. Just used for collecting all of the file names so that I didn't have to type them all out.
 function toList(string) {
