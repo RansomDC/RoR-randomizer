@@ -53,24 +53,38 @@
 
 #numberwhites {
     background-color: rgb(196, 196, 196);
+    height: 5%;
+    width: 5%;
 }
 #numbergreens {
     background-color: rgb(133, 252, 118);
+    height: 5%;
+    width: 5%;
 }
 #numberreds {
     background-color: rgb(252, 118, 118);
+    height: 5%;
+    width: 5%;
 }
 #numberblues {
     background-color: rgb(118, 172, 252);
+    height: 5%;
+    width: 5%;
 }
 #numberoranges {
     background-color: rgb(252, 172, 118);
+    height: 5%;
+    width: 5%;
 }
 #numberpurples {
     background-color: rgb(241, 118, 252);
+    height: 5%;
+    width: 5%;
 }
 #numberyellows {
     background-color: rgb(252, 250, 118);
+    height: 5%;
+    width: 5%;
 }
 
 /*==============
@@ -172,26 +186,52 @@ img {
     border: none;
     outline: none;
     transition: 0.4s;
-  }
+}
+
+  /*Style subtext fo the accordion button*/
+.instructions {
+    font-size: 14pt;
+    margin: 3px;
+}
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
- .accordion:hover {
+.accordion:hover {
     background-color: rgba(181,193,158,0.9);
     box-shadow: inset 5px 5px 1px rgba(220,226,169,0.8), inset -3px -3px 1px rgba(220,226,169,0.8);
-  }
+}
   
   /* Style the accordion panel. Note: hidden by default */
-  .panel {
+.panel {
       text-align: center;
     padding: 0 18px;
     background-color: rgba(66,82,99,0.8);
     display: none;
     overflow: hidden;
-  }
+}
 
-  .controlsContainer p {
+.controlsContainer p {
       color: white;
       font-weight: 900;
       font-size: 14pt;
       font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+}
+
+/*================
+    HOVER TEXT
+------------------*/
+
+
+
+
+.w-0:hover .w-0-tip {
+    visibility:visible;
+}
+
+/*
+FORMAT BODY
+*/
+
+.lower-body {
+    display: flex;
+    justify-content: center;
+}

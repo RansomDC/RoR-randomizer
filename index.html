@@ -11,23 +11,25 @@
 <body id="body">
     <div id="container">
         <div class="buttonContainer">
-            <button class="generate" onclick="yourRolls.standard321()">Generate your items</button>
+            <button class="generate" onclick="yourRolls.getRolls()">Generate your items</button>
         </div>
-        <button class="accordion">Choose your path</button>
+        <button class="accordion">Choose your path
+            <p class="instructions">Click here to choose how many random items of each type you want.</p>
+        </button>
         <div class="panel">
             <div class="controlsContainer">
-                <p>Choose the number of random items you want.</p>
-                <input id="numberwhites" type="text" value="3">
-                <input id="numbergreens" type="text" value="2">
-                <input id="numberreds" type="text" value="1">
-                <input id="numberblues" type="text" value="1">
-                <input id="numberoranges" type="text" value="1">
-                <input id="numberpurples" type="text" value="1">
-                <input id="numberyellows" type="text" value="1">
+                <input id="numberwhites" type="number" value="3" min="1" max="29">
+                <input id="numbergreens" type="number" value="2" min="1" max="29">
+                <input id="numberreds" type="number" value="1" min="1" max="26">
+                <input id="numberblues" type="number" value="1" min="1" max="18">
+                <input id="numberoranges" type="number" value="1" min="1" max="28">
+                <input id="numberpurples" type="number" value="1" min="1" max="14">
+                <input id="numberyellows" type="number" value="1" min="1" max="12">
             </div>
         </div>
 
-        <div >
+        <div class="lower-body">
+            <div class="about-section"></div>
             <div class="results">
                 <div id="common" class="box"></div>
                 <br>
@@ -43,6 +45,7 @@
                 <br>
                 <div id="boss" class="box"></div>
             </div>
+            <div id="tool-tip-container"></div>
         </div>
     </div>
 </body>
