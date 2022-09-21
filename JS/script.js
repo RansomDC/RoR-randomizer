@@ -229,6 +229,7 @@ let yourRolls = {
         yourRolls.printImg(this.uses, "use", oranges);
         yourRolls.printImg(this.voids, "void", purples);
         yourRolls.printImg(this.bosses, "boss", yellows);
+        // Insert tooltip generator here
     },
 
     //A method to print images of an item array's values
@@ -239,11 +240,15 @@ let yourRolls = {
     },
 };
 
+
+// A function that removes child elements so that the user can press the button again to re-roll their random items
 function eraseChildren(selElement){
     while (selElement.firstChild) {
         selElement.removeChild(selElement.firstChild);
     }
 }
+
+
 
 //Chooses a random element from the chosen list. puts it in the choices list
 //iterates <numberOfIterations> times
@@ -270,12 +275,15 @@ function chooseRandom(NumberChosenItems, itemTypeArray) {
     return returnItems;
 }
 
+
 //rng
 function random(max) {
     return Math.floor(Math.random() * max);
 }
 
-//A function that generates an image tag and then adds it to a chosen HTML element
+
+//A function that generates an image tag and then adds it to a chosen HTML element. Thisis used to display
+//the picture for each chosen item 
 function createImageAndTip(item, itemDir, container) {
     let img = document.createElement("img");
     img.src = `./img/${itemDir}-items/${item.imgName}`;
@@ -285,6 +293,7 @@ function createImageAndTip(item, itemDir, container) {
     img.className = `${item.UID}`;
     container.appendChild(img);
 
+    // This is a subset of the image creation that creates a tooltip relevant to each image that is shown.
     let div = document.createElement("div");
     div.setAttribute(
         "style",
@@ -319,3 +328,7 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 } 
+
+
+// Potential answer to making dynamic tooltips:
+//https://michaelsoriano.com/better-tooltips-with-plain-javascript-css/
