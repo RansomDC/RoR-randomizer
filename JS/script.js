@@ -235,22 +235,33 @@ let yourRolls = {
 
         // Insert tooltip generator here
         //Adds two event listeners to each of the elements in the collection above
-        for (var i = 0; i < itemImages.length; i++){
-            var a = itemImages[i];
-            a.addEventListener('mouseover', (e) => {
-                //Create tooltip here
-                var title = this.title;
-                console.log(title);
-                var tooltipWrap = document.createElement("div");
-                tooltipWrap.className = 'tooltip';
-                tooltipWrap.appendChild(document.createTextNode(title));
-                var firstChild = document.body.firstChild
-                firstChild.parentNode.insertBefore(tooltipWrap, firstChild);
-            })
-        };
+        // for (var i = 0; i < itemImages.length; i++){
+        //     var a = itemImages[i];
+        //     a.addEventListener('mouseover', (e) => {
+        //         //Create tooltip here
+        //         var title = e.srcElement.attributes[5].textContent;
+        //         console.log(title);
 
-            //valuable info in e > related target > firstChild > attributes > title > value / textContent / nodeValue
+        //         //Create a tooltip div
+        //         var tooltipWrap = document.createElement("div");
+        //         //Change that tooltip's class
+        //         tooltipWrap.className = 'tooltip';
+        //         //Apply a text node to above div
+        //         tooltipWrap.appendChild(document.createTextNode(title));
 
+        //         //Get the container the tooltip will apear in
+        //         var toolTipContainer = document.getElementById("tool-tip-container");
+
+        //         //append tooltipWrap to toolTipContainer
+        //         toolTipContainer.appendChild(tooltipWrap);
+        //     })
+
+        //     a.addEventListener('mouseout', (e) =>{
+        //         //Destroy tooltip here
+        //         var toolTipContainer = document.getElementById("tool-tip-container");
+        //         eraseChildren(toolTipContainer);
+        //     })
+        // };
         
     
     },
