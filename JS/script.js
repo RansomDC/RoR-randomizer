@@ -229,7 +229,30 @@ let yourRolls = {
         yourRolls.printImg(this.uses, "use", oranges);
         yourRolls.printImg(this.voids, "void", purples);
         yourRolls.printImg(this.bosses, "boss", yellows);
+
+        //Creates a collection of all of the images generated above
+        var itemImages = document.getElementsByClassName("item-image")
+
         // Insert tooltip generator here
+        //Adds two event listeners to each of the elements in the collection above
+        for (var i = 0; i < itemImages.length; i++){
+            var a = itemImages[i];
+            a.addEventListener('mouseover', (e) => {
+                //Create tooltip here
+                var title = this.title;
+                console.log(title);
+                var tooltipWrap = document.createElement("div");
+                tooltipWrap.className = 'tooltip';
+                tooltipWrap.appendChild(document.createTextNode(title));
+                var firstChild = document.body.firstChild
+                firstChild.parentNode.insertBefore(tooltipWrap, firstChild);
+            })
+        };
+
+            //valuable info in e > related target > firstChild > attributes > title > value / textContent / nodeValue
+
+        
+    
     },
 
     //A method to print images of an item array's values
@@ -290,18 +313,19 @@ function createImageAndTip(item, itemDir, container) {
     img.width = 75;
     img.height = 75;
     img.alt = item.imgName;
-    img.className = `${item.UID}`;
+    img.className = "item-image";
+    img.title = item.toolTip;
     container.appendChild(img);
 
     // This is a subset of the image creation that creates a tooltip relevant to each image that is shown.
-    let div = document.createElement("div");
-    div.setAttribute(
-        "style",
-        "background-color: black; color: #fff; text-align: center; padding: 5px 0; border-radius: 6px;"
-    );
-    div.className = `${item.UID}-tip`;
-    div.textContent = item.toolTip;
-    toolTips.appendChild(div);
+    // let div = document.createElement("div");
+    // div.setAttribute(
+    //     "style",
+    //     "background-color: black; color: #fff; text-align: center; padding: 5px 0; border-radius: 6px;"
+    // );
+    // div.className = `${item.UID}-tip`;
+    // div.textContent = item.toolTip;
+    // toolTips.appendChild(div);
 
 } 
 
